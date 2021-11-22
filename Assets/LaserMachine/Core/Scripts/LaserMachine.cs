@@ -22,7 +22,7 @@ public class LaserMachine : MonoBehaviour {
 
     [Header("External Data")]
     
-    [SerializeField] LaserData m_data;
+    [SerializeField] public LaserData m_data;
 
     [Tooltip("This variable is true by default, all the inspector properties will be overridden.")]
     [SerializeField] bool m_overrideExternalProperties = true;
