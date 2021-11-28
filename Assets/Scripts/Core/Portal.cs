@@ -279,9 +279,13 @@ public class Portal : MonoBehaviour {
         }
     }
 
+    private int travellerTagIndex;
+
     void OnTriggerEnter (Collider other) {
         var traveller = other.GetComponent<PortalTraveller> ();
         if (traveller) {
+            travellerTagIndex = traveller.gameObject.layer;
+            Physics.IgnoreLayerCollision(travellerTagIndex, 7, true);//desactiva collisiones con objetos en la capa de suelo
             OnTravellerEnterPortal (traveller);
         }
     }
@@ -290,6 +294,7 @@ public class Portal : MonoBehaviour {
         var traveller = other.GetComponent<PortalTraveller> ();
         if (traveller && trackedTravellers.Contains (traveller)) {
             traveller.ExitPortalThreshold ();
+            Physics.IgnoreLayerCollision(travellerTagIndex, 7, false);//activa collisiones con objetos en la capa de suelo
             trackedTravellers.Remove (traveller);
         }
     }
