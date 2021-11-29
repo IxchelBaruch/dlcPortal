@@ -6,6 +6,7 @@ public class Portal : MonoBehaviour {
     [Header ("Main Settings")]
     public Portal linkedPortal;
     public MeshRenderer screen;
+    public GameObject inactivePortalScreen;
     public int recursionLimit = 5;
 
     [Header ("Advanced Settings")]
@@ -20,6 +21,7 @@ public class Portal : MonoBehaviour {
     List<PortalTraveller> trackedTravellers;
     MeshFilter screenMeshFilter;
 
+
     void Awake () {
         playerCam = Camera.main;
         portalCam = GetComponentInChildren<Camera> ();
@@ -27,10 +29,17 @@ public class Portal : MonoBehaviour {
         trackedTravellers = new List<PortalTraveller> ();
         screenMeshFilter = screen.GetComponent<MeshFilter> ();
         screen.material.SetInt ("displayMask", 1);
+        gameObject.transform.parent.gameObject.SetActive(false);
     }
 
     void LateUpdate () {
         HandleTravellers ();
+        if (!linkedPortal.transform.parent.gameObject.activeSelf)
+        {
+            inactivePortalScreen.SetActive(true);
+        }
+        else
+            inactivePortalScreen.SetActive(false);
     }
 
     void HandleTravellers () {
@@ -72,6 +81,7 @@ public class Portal : MonoBehaviour {
     // Manually render the camera attached to this portal
     // Called after PrePortalRender, and before PostPortalRender
     public void Render () {
+
 
         // Skip rendering the view from this portal if player is not looking at the linked portal
         if (!CameraUtility.VisibleFromCamera (linkedPortal.screen, playerCam)) {
@@ -283,7 +293,7 @@ public class Portal : MonoBehaviour {
 
     void OnTriggerEnter (Collider other) {
         var traveller = other.GetComponent<PortalTraveller> ();
-        if (traveller) {
+        if (traveller && linkedPortal.transform.parent.gameObject.activeSelf) {
             travellerTagIndex = traveller.gameObject.layer;
             Physics.IgnoreLayerCollision(travellerTagIndex, 7, true);//desactiva collisiones con objetos en la capa de suelo
             OnTravellerEnterPortal (traveller);

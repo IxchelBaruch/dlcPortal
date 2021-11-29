@@ -299,10 +299,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53332d388a29fc1498acba4a2755e529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerObject: {fileID: 0}
-  playerRBody: {fileID: 0}
-  otherPortal: {fileID: 283908870}
-  overlaping: 0
 --- !u!65 &240655035
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -458,10 +454,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53332d388a29fc1498acba4a2755e529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerObject: {fileID: 0}
-  playerRBody: {fileID: 0}
-  otherPortal: {fileID: 240655033}
-  overlaping: 0
 --- !u!65 &283908872
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1322,8 +1314,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35b6c4be25b2fe84cbf2264e65ff6652, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ownPortal: {fileID: 283908870}
-  otherCamera: {fileID: 1483931281}
 --- !u!20 &1415589814
 Camera:
   m_ObjectHideFlags: 0
@@ -1454,8 +1444,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35b6c4be25b2fe84cbf2264e65ff6652, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ownPortal: {fileID: 240655033}
-  otherCamera: {fileID: 1415589812}
 --- !u!1 &1647377132
 GameObject:
   m_ObjectHideFlags: 0
@@ -1707,10 +1695,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31600d4ffbed8794fb3bf1c2216bf629, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraA: {fileID: 1415589814}
-  cameraB: {fileID: 1483931280}
-  cameraMatA: {fileID: 2100000, guid: 845e7114af159c044942ed06256f9d00, type: 2}
-  cameraMatB: {fileID: 2100000, guid: 79d48c1c9ebbef646b57c7d316c04f3d, type: 2}
 --- !u!4 &1962954505
 Transform:
   m_ObjectHideFlags: 0
@@ -1926,6 +1910,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BluePortal
       objectReference: {fileID: 0}
+    - target: {fileID: 322677584083700866, guid: 4c85ec8be18d1164f8a4f7d76dd5fa13, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 322677584083700877, guid: 4c85ec8be18d1164f8a4f7d76dd5fa13, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1974,6 +1962,10 @@ PrefabInstance:
       propertyPath: linkedPortal
       value: 
       objectReference: {fileID: 3743597650498673897}
+    - target: {fileID: 8678613301576936812, guid: 4c85ec8be18d1164f8a4f7d76dd5fa13, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c85ec8be18d1164f8a4f7d76dd5fa13, type: 3}
 --- !u!114 &3743597650442134991 stripped
@@ -2053,9 +2045,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrangePortal
       objectReference: {fileID: 0}
+    - target: {fileID: 6459641840090553278, guid: 81a38f032d0593746bf58a0f51c90bb4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7662501197362886982, guid: 81a38f032d0593746bf58a0f51c90bb4, type: 3}
       propertyPath: linkedPortal
       value: 
       objectReference: {fileID: 3743597650442134991}
+    - target: {fileID: 8620511334436285299, guid: 81a38f032d0593746bf58a0f51c90bb4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81a38f032d0593746bf58a0f51c90bb4, type: 3}
