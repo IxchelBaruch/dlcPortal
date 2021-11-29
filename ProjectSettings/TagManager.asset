@@ -7,7 +7,7 @@ TagManager:
   - Cubo
   - Suelo
   - Pared
-  - portalTrigger
+  - Portable
   layers:
   - Default
   - TransparentFX
