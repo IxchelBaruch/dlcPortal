@@ -23,4 +23,12 @@ public class PlayerHealth : MonoBehaviour
             print("Te moriste amigo");
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Floor Oil"))
+        {
+            print("Te moriste amigo");
+        }
+    }
 }
