@@ -1910,37 +1910,33 @@ PrefabInstance:
       propertyPath: m_Name
       value: BluePortal
       objectReference: {fileID: 0}
-    - target: {fileID: 322677584083700866, guid: 4c85ec8be18d1164f8a4f7d76dd5fa13, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 322677584083700877, guid: 4c85ec8be18d1164f8a4f7d76dd5fa13, type: 3}
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 322677584083700877, guid: 4c85ec8be18d1164f8a4f7d76dd5fa13, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.8799999
+      value: 1.85
       objectReference: {fileID: 0}
     - target: {fileID: 322677584083700877, guid: 4c85ec8be18d1164f8a4f7d76dd5fa13, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.03999996
+      value: 1.33
       objectReference: {fileID: 0}
     - target: {fileID: 322677584083700877, guid: 4c85ec8be18d1164f8a4f7d76dd5fa13, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.4
+      value: 7.68
       objectReference: {fileID: 0}
     - target: {fileID: 322677584083700877, guid: 4c85ec8be18d1164f8a4f7d76dd5fa13, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 322677584083700877, guid: 4c85ec8be18d1164f8a4f7d76dd5fa13, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7071068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 322677584083700877, guid: 4c85ec8be18d1164f8a4f7d76dd5fa13, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 322677584083700877, guid: 4c85ec8be18d1164f8a4f7d76dd5fa13, type: 3}
       propertyPath: m_LocalRotation.z
@@ -1948,11 +1944,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 322677584083700877, guid: 4c85ec8be18d1164f8a4f7d76dd5fa13, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 322677584083700877, guid: 4c85ec8be18d1164f8a4f7d76dd5fa13, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 322677584083700877, guid: 4c85ec8be18d1164f8a4f7d76dd5fa13, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -1962,10 +1958,6 @@ PrefabInstance:
       propertyPath: linkedPortal
       value: 
       objectReference: {fileID: 3743597650498673897}
-    - target: {fileID: 8678613301576936812, guid: 4c85ec8be18d1164f8a4f7d76dd5fa13, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c85ec8be18d1164f8a4f7d76dd5fa13, type: 3}
 --- !u!114 &3743597650442134991 stripped
@@ -2045,17 +2037,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrangePortal
       objectReference: {fileID: 0}
-    - target: {fileID: 6459641840090553278, guid: 81a38f032d0593746bf58a0f51c90bb4, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7662501197362886982, guid: 81a38f032d0593746bf58a0f51c90bb4, type: 3}
       propertyPath: linkedPortal
       value: 
       objectReference: {fileID: 3743597650442134991}
-    - target: {fileID: 8620511334436285299, guid: 81a38f032d0593746bf58a0f51c90bb4, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81a38f032d0593746bf58a0f51c90bb4, type: 3}
