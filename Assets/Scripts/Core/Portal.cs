@@ -22,7 +22,7 @@ public class Portal : MonoBehaviour {
     MeshFilter screenMeshFilter;
 
 
-    void Awake () {
+    void Start () {
         playerCam = Camera.main;
         portalCam = GetComponentInChildren<Camera> ();
         portalCam.enabled = false;
