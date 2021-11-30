@@ -27,13 +27,10 @@ public class Torreta : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.O))
+        if(transform.rotation.x < -60f || transform.rotation.x > 60f || transform.rotation.z < -60f || transform.rotation.z > 60f)
         {
-            anim.SetTrigger("ComenzarAtaque");
-        }
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            anim.SetTrigger("Descanso");
+            Salir();
+            this.enabled = false;
         }
     }
 
