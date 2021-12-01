@@ -28,18 +28,18 @@ public class Boton : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Cubo") || collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Cubo"))
         {
             contador = 0.0f;
             print("enter");
             rb.isKinematic = false;
-            //botonActivado = true;
+            botonActivado = true;
         }
     }
 
     private void OnCollisionExit(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Cubo") || collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Cubo"))
         {
             LeanTween.cancelAll();
             StopAllCoroutines();
@@ -48,25 +48,9 @@ public class Boton : MonoBehaviour
             {
                 print("exit");
                 rb.isKinematic = true;
-                //botonActivado = false;
+                botonActivado = false;
                 LeanTween.moveY(gameObject, posicionOriginal.y, 0.5f);
             }
-        }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Cubo") || other.gameObject.CompareTag("Player"))
-        {
-            botonActivado = true;
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.CompareTag("Cubo") || other.gameObject.CompareTag("Player"))
-        {            
-            botonActivado = false;
         }
     }
 

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3530883277386606525}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: button_whole_reference_02.polymsh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1190213565386203935}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: button_base_reference_skeleton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 4633364321372533615}
   - component: {fileID: 2349994459797228169}
   - component: {fileID: 2510483248207922931}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: button_base_reference
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,7 +170,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3567460781678527775}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: button_base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -205,8 +205,7 @@ GameObject:
   - component: {fileID: 3893524412446341661}
   - component: {fileID: 4236191814240715738}
   - component: {fileID: 4236191814240715733}
-  - component: {fileID: 496693221570790013}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: button_top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -271,19 +270,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 0
---- !u!65 &496693221570790013
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4236191814240715739}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.20667471, z: 1}
-  m_Center: {x: 0, y: 0.27111644, z: 0}
 --- !u!1 &4783354039714915052
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,7 +279,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5382770983040706349}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: static_prop_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -323,7 +309,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8893751321928380328}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: button_whole_reference_02.polymsh_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -353,7 +339,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2940244802413148162}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: static_prop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -384,7 +370,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 40089844256619288}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: button_top_reference_skeleton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -415,7 +401,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8591259486035177290}
-  m_Layer: 7
+  - component: {fileID: 6378744889287509749}
+  m_Layer: 0
   m_Name: Boton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -438,6 +425,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &6378744889287509749
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7530572211799591015}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.20667471, z: 1}
+  m_Center: {x: 0, y: 0.27111644, z: 0}
 --- !u!1 &7742491053687523117
 GameObject:
   m_ObjectHideFlags: 0
@@ -448,7 +448,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8506160772859553620}
   - component: {fileID: 8305100459000318320}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: button_top_reference
   m_TagString: Untagged
   m_Icon: {fileID: 0}
