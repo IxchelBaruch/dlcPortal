@@ -2554,6 +2554,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoundManager
       objectReference: {fileID: 0}
+    - target: {fileID: 3030936243438642038, guid: c361eda8ac44753499b1569a7b30ffd0, type: 3}
+      propertyPath: sounds.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3030936243438642038, guid: c361eda8ac44753499b1569a7b30ffd0, type: 3}
+      propertyPath: sounds.Array.data[3].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: d52e61df474a21b468dfbd3b17bad1d5, type: 3}
+    - target: {fileID: 3030936243438642038, guid: c361eda8ac44753499b1569a7b30ffd0, type: 3}
+      propertyPath: sounds.Array.data[3].name
+      value: ShootBlue
+      objectReference: {fileID: 0}
+    - target: {fileID: 3030936243438642038, guid: c361eda8ac44753499b1569a7b30ffd0, type: 3}
+      propertyPath: sounds.Array.data[4].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: ff0c805f56a540344822c5055f22c4ee, type: 3}
+    - target: {fileID: 3030936243438642038, guid: c361eda8ac44753499b1569a7b30ffd0, type: 3}
+      propertyPath: sounds.Array.data[4].name
+      value: ShootRed
+      objectReference: {fileID: 0}
+    - target: {fileID: 3030936243438642038, guid: c361eda8ac44753499b1569a7b30ffd0, type: 3}
+      propertyPath: sounds.Array.data[3].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3030936243438642038, guid: c361eda8ac44753499b1569a7b30ffd0, type: 3}
+      propertyPath: sounds.Array.data[4].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3030936243438642038, guid: c361eda8ac44753499b1569a7b30ffd0, type: 3}
+      propertyPath: sounds.Array.data[3].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3030936243438642038, guid: c361eda8ac44753499b1569a7b30ffd0, type: 3}
+      propertyPath: sounds.Array.data[4].volume
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3030936243438642039, guid: c361eda8ac44753499b1569a7b30ffd0, type: 3}
       propertyPath: m_RootOrder
       value: 15

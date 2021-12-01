@@ -12,6 +12,7 @@ public class portalShoot : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))//blue portal
         {
+            SoundManager.instance.Play("ShootBlue");
             RaycastHit hit;
             if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, Mathf.Infinity))
             {
@@ -27,6 +28,7 @@ public class portalShoot : MonoBehaviour
 
         if (Input.GetButtonDown("Fire2"))//orange portal
         {
+            SoundManager.instance.Play("ShootRed");
             RaycastHit hit;
             if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, Mathf.Infinity))
             {
