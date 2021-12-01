@@ -6,6 +6,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public int vidaMaxima;
     public int vidaActual;
+    public Transform respawn;
 
     void Start()
     {
@@ -16,11 +17,10 @@ public class PlayerHealth : MonoBehaviour
     {
         vidaActual -= _dano;
 
-        print("Me dierooooooooooooooooooooooooooon");
-
         if(vidaActual <= 0)
         {
-            print("Te moriste amigo");
+            gameObject.transform.position = respawn.position;
+            vidaActual = vidaMaxima;
         }
     }
 
@@ -28,7 +28,8 @@ public class PlayerHealth : MonoBehaviour
     {
         if (other.CompareTag("Floor Oil"))
         {
-            print("Te moriste amigo");
+            gameObject.transform.position = respawn.position;
+            vidaActual = vidaMaxima;
         }
     }
 }
