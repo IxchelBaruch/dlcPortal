@@ -14,7 +14,6 @@ public class switchBoton : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
                 cubito.position = positionSpawn.position;
             }
 
