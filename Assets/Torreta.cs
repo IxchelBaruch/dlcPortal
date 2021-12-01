@@ -18,11 +18,14 @@ public class Torreta : MonoBehaviour
 
     Animator anim;
 
+    Transform originalT;
+
     void Start()
     {
         anim = GetComponent<Animator>();
         puedeComezar = true;
         contador = cadencia;
+        originalT = GetComponent<Transform>();
     }
 
     void Update()
@@ -121,9 +124,9 @@ public class Torreta : MonoBehaviour
 
             //Devolver las cosas a su posicion original (0, 0, 0)
             DesactivarDisparo();
-            LeanTween.rotate(rayPos.gameObject, Vector3.zero, 1.0f);
-            LeanTween.rotate(laserPos.gameObject, Vector3.zero, 1.0f);
-            LeanTween.rotate(aimPos.gameObject, Vector3.zero, 1.0f).setOnComplete(Descanso);
+            LeanTween.rotate(rayPos.gameObject, originalT.rotation.eulerAngles, 1.0f);
+            LeanTween.rotate(laserPos.gameObject, originalT.rotation.eulerAngles, 1.0f);
+            LeanTween.rotate(aimPos.gameObject, originalT.rotation.eulerAngles, 1.0f).setOnComplete(Descanso);
         }
     }
 
@@ -131,9 +134,9 @@ public class Torreta : MonoBehaviour
     {
         //Devolver las cosas a su posicion original (0, 0, 0)
         DesactivarDisparo();
-        LeanTween.rotate(rayPos.gameObject, Vector3.zero, 1.0f);
-        LeanTween.rotate(laserPos.gameObject, Vector3.zero, 1.0f);
-        LeanTween.rotate(aimPos.gameObject, Vector3.zero, 1.0f).setOnComplete(Descanso);
+        LeanTween.rotate(rayPos.gameObject, originalT.rotation.eulerAngles, 1.0f);
+        LeanTween.rotate(laserPos.gameObject, originalT.rotation.eulerAngles, 1.0f);
+        LeanTween.rotate(aimPos.gameObject, originalT.rotation.eulerAngles, 1.0f).setOnComplete(Descanso);
     }
 
     void Descanso()
