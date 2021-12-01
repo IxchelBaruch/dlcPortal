@@ -6,6 +6,8 @@ public class Puerta : MonoBehaviour
 {
     Animator anim;
 
+    public GameObject btn1, btn2, btn3;
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -13,14 +15,25 @@ public class Puerta : MonoBehaviour
 
     public void Abrir()
     {
-        anim.SetTrigger("Open");
+        anim.SetBool("Abierto", true);
+    }
+
+    public void Cerrar()
+    {
+        anim.SetBool("Abierto", false);
     }
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.O))
+
+
+        if (btn1.GetComponentInChildren<Boton>().botonActivado && btn2.GetComponentInChildren<Boton>().botonActivado && btn3.GetComponentInChildren<Boton>().botonActivado)
         {
             Abrir();
+        }
+        else {
+            Cerrar();
+        
         }
     }
 }

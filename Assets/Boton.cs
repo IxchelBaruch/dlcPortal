@@ -10,6 +10,8 @@ public class Boton : MonoBehaviour
 
     float contador;
 
+    public bool botonActivado = false;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -31,6 +33,7 @@ public class Boton : MonoBehaviour
             contador = 0.0f;
             print("enter");
             rb.isKinematic = false;
+            botonActivado = true;
         }
     }
 
@@ -45,6 +48,7 @@ public class Boton : MonoBehaviour
             {
                 print("exit");
                 rb.isKinematic = true;
+                botonActivado = false;
                 LeanTween.moveY(gameObject, posicionOriginal.y, 0.5f);
             }
         }
@@ -55,4 +59,6 @@ public class Boton : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
         contador = 1.0f;
     }
+
+  
 }
