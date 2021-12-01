@@ -51,11 +51,11 @@ public class Torreta : MonoBehaviour
         if(other.gameObject.CompareTag("Player"))
         {
             RaycastHit hit;
-            //rayPos.transform.LookAt(other.transform);
-            var targetRotationRay = Quaternion.LookRotation(other.transform.position - rayPos.position);
+            rayPos.transform.LookAt(other.transform);
+            //var targetRotationRay = Quaternion.LookRotation(other.transform.position - rayPos.position);
 
-            rayPos.rotation = Quaternion.Slerp(rayPos.rotation, targetRotationRay, velocidadGiro * Time.deltaTime);
-            rayPos.transform.rotation = Quaternion.Euler(0.0f, rayPos.transform.localEulerAngles.y, rayPos.transform.localEulerAngles.z);
+            //rayPos.localRotation = Quaternion.Slerp(rayPos.localRotation, targetRotationRay, velocidadGiro * Time.deltaTime);
+            rayPos.transform.localRotation = Quaternion.Euler(0.0f, rayPos.transform.localEulerAngles.y, 0.0f);
             Debug.DrawRay(rayPos.position, rayPos.transform.forward * 1000, Color.green);
             
 
@@ -78,16 +78,16 @@ public class Torreta : MonoBehaviour
                             contador = 0.0f;
                         }
 
-                        var targetRotationLaser = Quaternion.LookRotation(hit.transform.position - laserPos.position);
+                        /*var targetRotationLaser = Quaternion.LookRotation(hit.transform.position - laserPos.position);
                         var targetRotationAim = Quaternion.LookRotation(hit.transform.position - aimPos.position);
 
                         laserPos.rotation = Quaternion.Slerp(laserPos.rotation, targetRotationLaser, velocidadGiro * Time.deltaTime);
-                        aimPos.rotation = Quaternion.Slerp(aimPos.rotation, targetRotationAim, velocidadGiro * Time.deltaTime);
+                        aimPos.rotation = Quaternion.Slerp(aimPos.rotation, targetRotationAim, velocidadGiro * Time.deltaTime);*/
 
-                        //laserPos.transform.LookAt(hit.transform);
-                        laserPos.rotation = Quaternion.Euler(0.0f, laserPos.localEulerAngles.y, laserPos.localEulerAngles.z); //Bloquear rotación X
-                        //aimPos.transform.LookAt(hit.transform);
-                        aimPos.rotation = Quaternion.Euler(0.0f, aimPos.localEulerAngles.y, aimPos.localEulerAngles.z); //Bloquear rotación X
+                        laserPos.transform.LookAt(hit.transform);
+                        laserPos.localRotation = Quaternion.Euler(0.0f, laserPos.localEulerAngles.y, laserPos.localEulerAngles.z); //Bloquear rotación X
+                        aimPos.transform.LookAt(hit.transform);
+                        aimPos.localRotation = Quaternion.Euler(0.0f, aimPos.localEulerAngles.y, aimPos.localEulerAngles.z); //Bloquear rotación X
 
                         contador += Time.deltaTime;
                     }
