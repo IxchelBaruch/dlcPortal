@@ -1065,7 +1065,8 @@ Transform:
   m_LocalRotation: {x: -0.00000003774895, y: 0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
-  m_Children: []
+  m_Children:
+  - {fileID: 3110507899828412369}
   m_Father: {fileID: 4792138435596931552}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1193,6 +1194,50 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.00000013411045, y: -0.06411946, z: -0.011422977}
     m_Extent: {x: 0.25123072, y: 0.3776436, z: 0.0929387}
   m_DirtyAABB: 0
+--- !u!1 &3714676766236264613
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3110507899828412369}
+  - component: {fileID: 21435309}
+  m_Layer: 2
+  m_Name: CuboPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3110507899828412369
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3714676766236264613}
+  m_LocalRotation: {x: 0.00000003774895, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.058318205, y: 0.59531254, z: 0.55450547}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_Children: []
+  m_Father: {fileID: 7832273116194171287}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &21435309
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3714676766236264613}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.95
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3762264297800598167
 GameObject:
   m_ObjectHideFlags: 0
@@ -2011,6 +2056,7 @@ GameObject:
   - component: {fileID: 5317282388130138973}
   - component: {fileID: 2049310286}
   - component: {fileID: 2007927774}
+  - component: {fileID: 2608751233583839125}
   m_Layer: 10
   m_Name: Chell
   m_TagString: Player
@@ -2082,9 +2128,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: affa05d31c1c3dc438478b98acdc390f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  mouseSensitivity: 2
-  jumpForce: 2
+  speed: 4
+  mouseSensitivity: 4
+  jumpForce: 4
 --- !u!114 &5317282388130138913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2141,6 +2187,19 @@ MonoBehaviour:
   bluePortal: {fileID: 0}
   orangePortal: {fileID: 0}
   playerObject: {fileID: 5317282388130138970}
+--- !u!114 &2608751233583839125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5317282388130138970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1eafe3d26bde02446a0a1e633e5401a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cuboPos: {fileID: 3110507899828412369}
 --- !u!1 &5317282388403315687
 GameObject:
   m_ObjectHideFlags: 0
