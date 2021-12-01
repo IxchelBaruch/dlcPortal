@@ -14,22 +14,24 @@ public class LevantarCubos : MonoBehaviour
         if(sosteniendo)
         {
             cubo.transform.position = cuboPos.position;
-            cubo.GetComponent<Rigidbody>().isKinematic = true;
+            cubo.GetComponent<Rigidbody>().velocity = Vector3.zero;
         }
 
         if (Input.GetKeyDown(KeyCode.E) && !sosteniendo && cubo != null /*&& cuboPos.childCount <= 0*/)
         {
             //print("activado");
             sosteniendo = true;
-            /*cubo.transform.position = cuboPos.position;
+            cubo.GetComponent<Collider>().enabled = false;            
+            /*
+            cubo.transform.position = cuboPos.position;
             cubo.transform.parent = cuboPos;
-            cubo.GetComponent<Rigidbody>().isKinematic = true;*/
+            */
         }
         else if(Input.GetKeyDown(KeyCode.E) && sosteniendo/*&& cuboPos.childCount != 0*/)
         {
             //print("desactivado");
             sosteniendo = false;
-            cubo.GetComponent<Rigidbody>().isKinematic = false;
+            cubo.GetComponent<Collider>().enabled = true;
             //cubo.transform.parent = null;
         }
     }

@@ -289,14 +289,15 @@ public class Portal : MonoBehaviour {
         }
     }
 
-    private int travellerTagIndex;
+    private int travellerOriginalLayer;
 
     void OnTriggerEnter (Collider other) {
         var traveller = other.GetComponent<PortalTraveller> ();
-        if (traveller && linkedPortal.transform.parent.gameObject.activeSelf) {
-            travellerTagIndex = traveller.gameObject.layer;
-            Physics.IgnoreLayerCollision(travellerTagIndex, 7, true);//desactiva collisiones con objetos en la capa de suelo
-            Debug.LogWarning("ColisionDesactivada");
+        if (traveller && linkedPortal.transform.parent.gameObject.activeSelf & traveller.gameObject.layer != 11) {
+            travellerOriginalLayer = traveller.gameObject.layer;
+            traveller.gameObject.layer = 11;
+
+            Debug.LogWarning("ColisionDesactivada en layer: " + travellerOriginalLayer);
             OnTravellerEnterPortal (traveller);
         }
     }
@@ -305,8 +306,9 @@ public class Portal : MonoBehaviour {
         var traveller = other.GetComponent<PortalTraveller> ();
         if (traveller && trackedTravellers.Contains (traveller)) {
             traveller.ExitPortalThreshold ();
-            Physics.IgnoreLayerCollision(travellerTagIndex, 7, false);//activa collisiones con objetos en la capa de suelo
+            traveller.gameObject.layer = travellerOriginalLayer;
             trackedTravellers.Remove (traveller);
+            Debug.LogWarning("ColisionReactivada");
         }
     }
 

@@ -38,7 +38,7 @@ public class SoundManager : MonoBehaviour
         Sound s = Array.Find(sounds, sound => sound.name == name);
         if (s == null)
         {
-            Debug.LogWarning("El sonido: " + name + " no se encontro");
+            //Debug.LogWarning("El sonido: " + name + " no se encontro");
             return;
         }
         s.source.Play();
