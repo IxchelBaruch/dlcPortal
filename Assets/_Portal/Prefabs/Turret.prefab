@@ -541,6 +541,7 @@ GameObject:
   - component: {fileID: 8139325855714051034}
   - component: {fileID: 850507983413029453}
   - component: {fileID: 4826289906411219363}
+  - component: {fileID: 1742870458}
   m_Layer: 8
   m_Name: Turret
   m_TagString: Untagged
@@ -644,6 +645,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1742870458
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8139325855714051033}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3274002, y: 0.72994554, z: 0.46180725}
+  m_Center: {x: 0, y: 0.659999, z: 0.09}
 --- !u!1 &8948707988670060068
 GameObject:
   m_ObjectHideFlags: 0

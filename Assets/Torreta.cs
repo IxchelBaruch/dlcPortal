@@ -33,10 +33,10 @@ public class Torreta : MonoBehaviour
         print(transform.localEulerAngles);
         if((transform.localEulerAngles.x < 300f && transform.localEulerAngles.x > 60f) || (transform.localEulerAngles.z < 300f && transform.localEulerAngles.z > 60f))
         {
-            print("AAAAAAAAAAAAAAAAAAAAAAAA");
             Salir();
             SoundManager.instance.Play("Morir");
             this.enabled = false;
+            laserPos.gameObject.SetActive(false);
             //Destroy(gameObject);
         }
     }
