@@ -30,7 +30,16 @@ public class Torreta : MonoBehaviour
         if(transform.rotation.x < -60f || transform.rotation.x > 60f || transform.rotation.z < -60f || transform.rotation.z > 60f)
         {
             Salir();
+            SoundManager.instance.Play("Morir");
             this.enabled = false;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("Player"))
+        {
+            SoundManager.instance.Play("Activada");
         }
     }
 
@@ -108,6 +117,8 @@ public class Torreta : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player"))
         {
+            SoundManager.instance.Play("Cerrar");
+
             //Devolver las cosas a su posicion original (0, 0, 0)
             DesactivarDisparo();
             LeanTween.rotate(rayPos.gameObject, Vector3.zero, 1.0f);
