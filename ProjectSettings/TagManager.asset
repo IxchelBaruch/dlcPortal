@@ -9,6 +9,7 @@ TagManager:
   - Pared
   - Portable
   - Floor Oil
+  - cubeDestroy
   layers:
   - Default
   - TransparentFX

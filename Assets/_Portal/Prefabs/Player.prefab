@@ -2721,6 +2721,7 @@ GameObject:
   - component: {fileID: 6695251941524800068}
   - component: {fileID: 6695251941524800069}
   - component: {fileID: 5839894712555917298}
+  - component: {fileID: 940241789884284738}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2821,6 +2822,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidaMaxima: 10
   vidaActual: 0
+  respawn: {fileID: 0}
 --- !u!114 &6695251941524800067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2872,6 +2874,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e8f4322b18b6054a918354a5140ad03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &940241789884284738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6695251941524800071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f4553ae155a54242a389627007e5200, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6709252264939440990

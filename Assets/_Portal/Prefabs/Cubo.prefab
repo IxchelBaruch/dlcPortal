@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1070253805915697721}
   - component: {fileID: 1077303687}
   - component: {fileID: 711906719300711016}
-  m_Layer: 9
+  m_Layer: 2
   m_Name: Cubo
   m_TagString: Cubo
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabCubo: {fileID: 1070253805915697727}
-  tubo1: 0
+  tubo1: 1
   tubo2: 0
   tubo1Pos: {x: -4.5, y: 8, z: -18.5}
   tubo2Pos: {x: -4.5, y: 8, z: -27.5}
@@ -103,7 +103,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5275691866396615222}
-  m_Layer: 9
+  m_Layer: 2
   m_Name: polymsh_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,7 +134,7 @@ GameObject:
   m_Component:
   - component: {fileID: 38377945492473846}
   - component: {fileID: 6334037440504825493}
-  m_Layer: 9
+  m_Layer: 2
   m_Name: metal_box_reference
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -217,7 +217,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8780051829841291629}
-  m_Layer: 9
+  m_Layer: 2
   m_Name: metal_box_reference_skeleton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -248,7 +248,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4984521913388465885}
-  m_Layer: 9
+  m_Layer: 2
   m_Name: polymsh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -279,7 +279,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8776094255709347824}
-  m_Layer: 9
+  m_Layer: 2
   m_Name: CubeMesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}

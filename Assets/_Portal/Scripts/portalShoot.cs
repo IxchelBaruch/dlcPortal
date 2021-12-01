@@ -42,4 +42,13 @@ public class portalShoot : MonoBehaviour
             }
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("cubeDestroy"))
+        {
+            bluePortal.SetActive(false);
+            orangePortal.SetActive(false);
+        }
+    }
 }

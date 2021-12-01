@@ -17,9 +17,9 @@ public class ReaparecerCubo : MonoBehaviour
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.J))
-        {
-            Destroy(gameObject);
+        {            
             Reaparecer();
+            Destroy(gameObject);
         }
     }
 
@@ -36,6 +36,15 @@ public class ReaparecerCubo : MonoBehaviour
             GameObject go = Instantiate(prefabCubo, tubo2Pos, Quaternion.identity);
             go.SetActive(true);
             go.GetComponent<ReaparecerCubo>().enabled = true;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("cubeDestroy"))
+        {
+            Reaparecer();
+            Destroy(gameObject);
         }
     }
 }
