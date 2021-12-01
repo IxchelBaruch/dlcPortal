@@ -15,6 +15,7 @@ public class switchBoton2 : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 cubito.position = positionSpawn.position;
+                cubito.GetComponent<Rigidbody>().velocity = Vector3.zero;
             }
 
         }
