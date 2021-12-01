@@ -296,6 +296,7 @@ public class Portal : MonoBehaviour {
         if (traveller && linkedPortal.transform.parent.gameObject.activeSelf) {
             travellerTagIndex = traveller.gameObject.layer;
             Physics.IgnoreLayerCollision(travellerTagIndex, 7, true);//desactiva collisiones con objetos en la capa de suelo
+            Debug.LogWarning("ColisionDesactivada");
             OnTravellerEnterPortal (traveller);
         }
     }

@@ -8,20 +8,29 @@ public class LevantarCubos : MonoBehaviour
     public Transform cuboPos;
     bool sosteniendo = false;
 
+
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E) && cubo != null && cuboPos.childCount <= 0)
+        if(sosteniendo)
         {
-            sosteniendo = true;
             cubo.transform.position = cuboPos.position;
-            cubo.transform.parent = cuboPos;
             cubo.GetComponent<Rigidbody>().isKinematic = true;
         }
-        else if(Input.GetKeyDown(KeyCode.E) && cuboPos.childCount != 0)
+
+        if (Input.GetKeyDown(KeyCode.E) && !sosteniendo && cubo != null /*&& cuboPos.childCount <= 0*/)
         {
+            //print("activado");
+            sosteniendo = true;
+            /*cubo.transform.position = cuboPos.position;
+            cubo.transform.parent = cuboPos;
+            cubo.GetComponent<Rigidbody>().isKinematic = true;*/
+        }
+        else if(Input.GetKeyDown(KeyCode.E) && sosteniendo/*&& cuboPos.childCount != 0*/)
+        {
+            //print("desactivado");
             sosteniendo = false;
             cubo.GetComponent<Rigidbody>().isKinematic = false;
-            cubo.transform.parent = null;
+            //cubo.transform.parent = null;
         }
     }
 
